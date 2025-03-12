@@ -1,10 +1,10 @@
 json-server:
 
-cd json-server
-npm install
-npm run server
+1. cd json-server
+2. npm install
+3. npm run server
 
 frontend:
-cd frontend
-npm install
-npm start
+1. cd frontend
+2. npm install
+3. npm start
