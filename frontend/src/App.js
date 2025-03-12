@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { Divider, Flex, Space } from 'antd';
+import { Flex } from 'antd';
 import EventCard from './components/EventCard';
 import { observer } from 'mobx-react-lite';
 import eventsStore from './store/EventsStore';
-import EventDetails from './feauters/EventDetails';
-import DeleteAllEvents from './feauters/DeleteAllEvents';
-import AddTestEvents from './feauters/AddTestEvents';
+import EventSettings from './feauters/EventSettings';
 import { LoadingOutlined } from '@ant-design/icons';
 import Title from 'antd/es/typography/Title';
 import './assets/App.css'
@@ -20,18 +18,6 @@ function App () {
 
   return (
     <>
-      <Flex justify='space-around' >
-        <Space>
-          {eventsStore.data.length === 0 && !eventsStore.isLoading?
-          <AddTestEvents/>
-          :
-          <DeleteAllEvents/>
-          }
-        </Space>
-      </Flex>
-
-      <Divider/>
-      
       <Flex justify='center' wrap gap='large'>
         {
           eventsStore.isLoading?<LoadingOutlined />:
@@ -47,7 +33,7 @@ function App () {
         }
       </Flex>
 
-      <EventDetails event={selectedEvent} open={selectedEvent?true:false} onFinish={()=>{setSelectedEvent(null)}}/>
+      <EventSettings event={selectedEvent} open={selectedEvent?true:false} onFinish={()=>{setSelectedEvent(null)}}/>
     </>
   )
 };
