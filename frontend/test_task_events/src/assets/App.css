@@ -1,0 +1,39 @@
+.demo-photo {
+  width: 300px;
+  border-radius: 7px;
+}
+
+.card-cover{
+  position: relative;
+  border-radius: 10px;
+}
+
+.card-photo{
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 7px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.countdown{
+  position: absolute;
+  bottom: 0px;
+  width: 100px;
+  background: rgba(234, 234, 234, 0.9);
+  color: white;
+  padding: 8px;
+  text-align: center;
+  font-size: 14px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  right: 0px;
+}
+
+.card{
+  width: 300px;
+}
