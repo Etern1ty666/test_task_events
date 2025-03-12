@@ -4,7 +4,6 @@ cd json-server
 npm install
 npm run server
 
-
 frontend:
 cd frontend
 npm install
